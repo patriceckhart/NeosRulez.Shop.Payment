@@ -1,0 +1,15 @@
+prototype(NeosRulez.Shop.Payment:Payment.Generic) < prototype(NeosRulez.Shop:Document.GenericPage)
+
+prototype(NeosRulez.Shop.Payment:Payment.Prepayment) < prototype(NeosRulez.Shop.Payment:Payment.Generic) {
+    @context.icon = ${''}
+}
+
+prototype(NeosRulez.Shop.Payment:Payments) {
+    @class = 'NeosRulez\\Shop\\Payment\\Fusion\\PaymentFusion'
+}
+
+prototype(NeosRulez.Shop:Component.Cart) {
+
+    payments >
+    payments = NeosRulez.Shop.Payment:Payments
+}

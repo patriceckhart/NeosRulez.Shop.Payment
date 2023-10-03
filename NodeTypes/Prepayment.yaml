@@ -1,0 +1,21 @@
+'NeosRulez.Shop.Payment:Payment.Prepayment':
+  superTypes:
+    'NeosRulez.Shop.Payment:Payment.Generic': true
+  ui:
+    label: Prepayment
+    icon: fas fa-wallet
+    group: payment
+    inspector:
+      groups:
+        document:
+          label: Prepayment
+          icon: fas fa-wallet
+  properties:
+    successPage:
+      type: reference
+      ui:
+        label: Success page
+        reloadIfChanged: true
+        inspector:
+          group: document
+          position: after faicon

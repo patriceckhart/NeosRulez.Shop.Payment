@@ -1,0 +1,61 @@
+'NeosRulez.Shop.Payment:Payment.Generic':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Document': true
+    'NeosRulez.Bootstrap:Mixin.FontAwesomeIcon': true
+    'Neos.Seo:TitleTagMixin': false
+    'Neos.Seo:SeoMetaTagsMixin': false
+    'Neos.Seo:TwitterCardMixin': false
+    'Neos.Seo:CanonicalLinkMixin': false
+    'Neos.Seo:OpenGraphMixin': false
+    'Neos.Seo:XmlSitemapMixin': false
+  properties:
+    faicon:
+      ui:
+        inspector:
+          group: document
+          position: end
+    faiconSize:
+      ui:
+        inspector:
+          hidden: true
+    onlyicon:
+      ui: ~
+    uriPathSegment:
+      defaultValue: ''
+      ui: ~
+    _hiddenInIndex:
+      type: boolean
+      defaultValue: TRUE
+      ui:
+        inspector:
+          group: ~
+    metaRobotsNoindex:
+      type: boolean
+      defaultValue: TRUE
+      ui:
+        inspector:
+          group: ~
+    metaRobotsNofollow:
+      type: boolean
+      defaultValue: TRUE
+      ui:
+        inspector:
+          group: ~
+    targetMode:
+      type: string
+      defaultValue: FALSE
+      ui:
+        inspector:
+          group: ~
+    paymentStatus:
+      type: boolean
+      ui:
+        label: Set as paid
+        reloadIfChanged: true
+        inspector:
+          group: document
+          position: end
+  constraints:
+    nodeTypes:
+      'Neos.Neos:Document': false

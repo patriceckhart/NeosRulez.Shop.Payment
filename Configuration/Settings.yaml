@@ -1,0 +1,18 @@
+Neos:
+  Neos:
+    nodeTypes:
+      groups:
+        payment:
+          position: 'end'
+          label: 'Payment'
+    fusion:
+      autoInclude:
+        NeosRulez.Shop.Payment: true
+
+NeosRulez:
+  Shop:
+    Payment:
+      payments:
+        -
+          nodeType: 'NeosRulez.Shop.Payment:Payment.Prepayment'
+          class: 'NeosRulez\Shop\Payment\Prepayment'

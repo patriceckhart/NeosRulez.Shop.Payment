@@ -1,0 +1,9 @@
+'Neos.Neos:Document':
+  constraints:
+    nodeTypes:
+      'NeosRulez.Shop.Payment:Payment.Generic': false
+
+'NeosRulez.Shop:Document.Cart':
+  constraints:
+    nodeTypes:
+      'NeosRulez.Shop.Payment:Payment.Generic': true
