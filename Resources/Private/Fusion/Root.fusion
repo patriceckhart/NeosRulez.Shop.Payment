@@ -10,6 +10,9 @@ prototype(NeosRulez.Shop.Payment:Payments) {
 
 prototype(NeosRulez.Shop:Component.Cart) {
 
+    paymentSettings = NeosRulez.Shop:Fusion.Payments
+    paymentNodes = NeosRulez.Shop.Payment:Payments
+
     payments >
-    payments = NeosRulez.Shop.Payment:Payments
+    payments = ${Array.concat(this.paymentSettings, this.paymentNodes)}
 }
