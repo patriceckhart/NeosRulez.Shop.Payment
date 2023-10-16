@@ -17,6 +17,6 @@ NeosRulez:
   Shop:
     Payment:
       payments:
-        -
+        prepayment:
           nodeType: 'NeosRulez.Shop.Payment:Payment.Prepayment'
-          class: 'NeosRulez\Shop\Payment\Prepayment'
+          class: 'NeosRulez\Shop\Payment\Payment\Prepayment'
