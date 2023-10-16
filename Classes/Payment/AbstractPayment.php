@@ -38,4 +38,14 @@ abstract class AbstractPayment
      */
     protected $mailService;
 
+    /**
+     * @param int $orderNumber
+     * @param string $successUri
+     * @return string
+     */
+    public function generateSuccessUri(int $orderNumber, string $successUri): string
+    {
+        return parse_url($successUri, PHP_URL_SCHEME) . '://' . parse_url($successUri, PHP_URL_HOST) . '/payment/success/' . $orderNumber . '/' . base64_encode($successUri);
+    }
+
 }

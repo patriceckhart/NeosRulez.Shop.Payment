@@ -7,3 +7,9 @@
   constraints:
     nodeTypes:
       'NeosRulez.Shop.Payment:Payment.Generic': true
+
+'NeosRulez.Shop:Document.Payment.Success':
+  ui: ~
+
+'NeosRulez.Shop:Document.Payment.Failure':
+  ui: ~

@@ -1,4 +1,8 @@
 Neos:
+  Flow:
+    mvc:
+      routes:
+        'NeosRulez.Shop.Payment': true
   Neos:
     nodeTypes:
       groups:

@@ -1,0 +1,11 @@
+privilegeTargets:
+  Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege:
+    'NeosRulez.Shop.Payment:AfterPaymentControllerActions':
+      matcher: 'method(NeosRulez\Shop\Payment\Controller\AfterPaymentController->.*Action())'
+
+roles:
+  'Neos.Flow:Everybody':
+    privileges:
+      -
+        privilegeTarget: 'NeosRulez.Shop.Payment:AfterPaymentControllerActions'
+        permission: GRANT

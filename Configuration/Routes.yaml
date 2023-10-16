@@ -1,0 +1,8 @@
+-
+  name: 'success uri'
+  uriPattern: 'payment/success/{orderNumber}/{base64EncodedString}'
+  defaults:
+    '@package': 'NeosRulez.Shop.Payment'
+    '@controller': 'AfterPayment'
+    '@action': 'resetCartAndRedirect'
+  appendExceedingArguments: true
