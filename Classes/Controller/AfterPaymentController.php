@@ -63,6 +63,8 @@ class AfterPaymentController extends ActionController
         $this->cart->refreshCoupons();
         $this->cart->deleteCart();
 
+        $this->persistenceManager->persistAll();
+
         $this->redirectToUri($successUri);
     }
 
