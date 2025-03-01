@@ -55,11 +55,13 @@ class AfterPaymentController extends ActionController
         $successUri = base64_decode($base64EncodedString);
         $order = $this->orderRepository->findByOrdernumber($orderNumber);
 
-        $this->finisherService->initAfterPaymentFinishers(json_decode($order->getSummary(), true));
+        $finisherData = json_decode($order->getInvoicedata(), true);
+        $summary = json_decode($order->getSummary(), true);
+        $finisherData['summary'] = $summary;
+        $this->finisherService->initAfterOrderFinishers($finisherData);
 
         $this->stockService->execute();
 
-        $this->mailService->execute($this->cart->arguments);
         $this->cart->refreshCoupons();
         $this->cart->deleteCart();
 

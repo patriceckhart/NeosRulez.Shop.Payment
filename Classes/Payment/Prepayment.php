@@ -21,13 +21,7 @@ class Prepayment extends AbstractPayment
         $order = $this->orderRepository->findByOrderNumber($args['order_number']);
         $order->setCanceled(false);
         $this->orderRepository->update($order);
-
-        $this->stockService->execute();
-        $this->mailService->execute($args);
-        $this->cart->refreshCoupons();
-        $this->cart->deleteCart();
-
-        return $successUri;
+        return $this->generateSuccessUri($order->getOrdernumber(), $successUri);
     }
 
 }
